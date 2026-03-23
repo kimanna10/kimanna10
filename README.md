@@ -37,7 +37,7 @@
 
 ---
 
-<!-- ### 📈 GitHub Analytics
+### 📈 GitHub Analytics
 
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=kimanna10&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=8B5CF6&text_color=ffffff" alt="Anna's GitHub Stats" />
@@ -46,18 +46,7 @@
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=kimanna10&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=8B5CF6&currStreakLabel=6366F1" alt="GitHub Streak" />
-</p> -->
-
-<div align="center" style="background: #0D1117; padding: 20px; border-radius: 16px;">
-  
-### 📈 GitHub Analytics
-
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=kimanna10&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=8B5CF6&text_color=ffffff" alt="GitHub Stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kimanna10&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=ffffff" alt="Top Languages" />
-
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kimanna10&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=8B5CF6&currStreakLabel=6366F1" alt="GitHub Streak" />
-
-</div>
+</p>
 
 ---
 
@@ -65,13 +54,13 @@
 
 Here are some of my recent works!
 
-| Project                                                                        | Description                                              | Tech Stack                           |
-| :----------------------------------------------------------------------------- | :------------------------------------------------------- | :----------------------------------- |
-| **[course.marzhanjunusbek.com](https://github.com/kimanna10/marzhanjunusbek)** | Landing for author's therapeutic course                  | Next.js, Tailwind CSS                |
-| **[hot-solutions](https://github.com/kimanna10/hot-solutions)**                | Site-mock rebuild migrated from PHP to Next.js           | Next.js, Tailwind CSS, Framer Motion |
-| **[rakhmetulayeva](https://github.com/kimanna10/rakhmetulayeva)**              | Personal site portfolio for dance creator.               | Next.js, Node.js, Tailwind CSS       |
-| **[kimanna10](https://github.com/kimanna10/kimanna10)**                        | My personal website and digital playground.              | Next.js, Tailwind CSS                |
-| **[zam-ok.kz](https://github.com/kimanna10/zam-ok.kz)**                        | A comprehensive platform built with performance in mind. | Next.js, TypeScript, Prisma          |
+| Project                                                              | Description                                              | Tech Stack                           |
+| :------------------------------------------------------------------- | :------------------------------------------------------- | :----------------------------------- |
+| **[course.marzhanjunusbek.com](https://course.marzhanjunusbek.com)** | Landing for author's therapeutic course                  | Next.js, Tailwind CSS                |
+| **[hot-solutions](https://hot-solutions.vercel.app)**                | Site-mock rebuild migrated from PHP to Next.js           | Next.js, Tailwind CSS, Framer Motion |
+| **[rakhmetulayeva](https://rakhmetulayeva.vercel.app)**              | Personal site portfolio for dance creator.               | Next.js, Node.js, Tailwind CSS       |
+| **[kimanna10](https://dev.kimanna10.com)**                           | My personal website and digital playground.              | Next.js, Tailwind CSS                |
+| **[zam-ok.kz](https://zam-ok-kz.vercel.app/)**                       | A comprehensive platform built with performance in mind. | Next.js, TypeScript, Prisma          |
 
 ---
 
