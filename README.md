@@ -64,7 +64,7 @@ Here are some of my recent works!
 
 ---
 
-### 🤝 Let's Connect
+### 🤝 Contact info
 
 <p align="center">
   <a href="https://t.me/kimanna10" target="_blank"><img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
