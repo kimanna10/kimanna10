@@ -37,7 +37,7 @@
 
 ---
 
-### 📈 GitHub Analytics
+<!-- ### 📈 GitHub Analytics
 
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=kimanna10&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=8B5CF6&text_color=ffffff" alt="Anna's GitHub Stats" />
@@ -46,7 +46,18 @@
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=kimanna10&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=8B5CF6&currStreakLabel=6366F1" alt="GitHub Streak" />
-</p>
+</p> -->
+
+<div align="center" style="background: #0D1117; padding: 20px; border-radius: 16px;">
+  
+### 📈 GitHub Analytics
+
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=kimanna10&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&icon_color=8B5CF6&text_color=ffffff" alt="GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kimanna10&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=ffffff" alt="Top Languages" />
+
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kimanna10&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=8B5CF6&currStreakLabel=6366F1" alt="GitHub Streak" />
+
+</div>
 
 ---
 
@@ -71,10 +82,4 @@ Here are some of my recent works!
   <a href="https://linkedin.com/in/kimanna10" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:kimannais1711@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <!-- <a href="https://kimanna10.vercel.app" target="_blank"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a> -->
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer&animation=twinkling" width="100%"/>
 </p>
