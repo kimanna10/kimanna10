@@ -1,0 +1,18 @@
+{
+  "Nav": {
+    "home": "홈",
+    "about": "소개",
+    "projects": "프로젝트",
+    "contacts": "연락처"
+  },
+  "Hero": {
+    "title": "김안나",
+    "choreo": "안무가",
+    "dir": "퍼포먼스 디렉터"
+  },
+  "Contacts": {
+    "title": "연락처",
+    "email": "이메일",
+    "instagram": "인스타그램"
+  }
+}

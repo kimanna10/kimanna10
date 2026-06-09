@@ -1,0 +1,18 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "Hero": {
+    "title": "Kim Anna",
+    "choreo": "Choreographer",
+    "dir": "Performance Director"
+  },
+  "Contacts": {
+    "title": "Contacts",
+    "email": "Email",
+    "instagram": "Instagram"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Nav": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "contacts": "Контакты"
+  },
+ "Hero": {
+    "title": "Ким Анна",
+    "choreo": "Хореограф",
+    "dir": "Режиссер-постановщик"
+  },
+  "Contacts": {
+    "title": "Контакты",
+    "email": "Email",
+    "instagram": "Instagram"  }
+}

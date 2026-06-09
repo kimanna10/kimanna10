@@ -1,0 +1,18 @@
+{
+  "Nav": {
+    "home": "Басты бет",
+    "about": "Мен туралы",
+    "projects": "Жобалар",
+    "contacts": "Байланыс"
+  },
+  "Hero": {
+    "title": "Ким Анна",
+    "choreo": "Хореограф",
+    "dir": "Режиссер-постановщик"
+  },
+  "Contacts": {
+    "title": "Байланыс",
+    "email": "Email",
+    "instagram": "Instagram"
+  }
+}
