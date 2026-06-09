@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
   ];
 
   // Определяем текущий язык
-  const currentLang = pathname.split("/")[1] || "ru";
+  const currentLang = pathname.split("/")[1] || "en";
 
   const switchLang = (newLocale) => {
     const newPath = pathname.replace(/^\/(ru|en|kr|kz)/, "");
