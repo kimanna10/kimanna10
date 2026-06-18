@@ -282,6 +282,7 @@
 
 "use client";
 
+import Heading from "@/components/ui/Heading";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -289,20 +290,18 @@ export default function Contacts() {
   const t = useTranslations("Contacts");
 
   return (
-    <main className="min-h-dvh flex flex-col justify-center relative overflow-hidden bg-background">
-      <h1 className="absolute top-5 left-5 text-[14vw] md:text-[10vw] font-bold text-foreground/40 uppercase leading-none select-none pointer-events-none">
-        {t("title")}
-      </h1>
+    <main className="min-h-dvh  overflow-hidden bg-background">
+      <Heading title={t("title")} />
 
-      <div className="relative z-10 w-full mt-20">
+      <div className="flex flex-col justify-center relative z-10 w-full mt-20">
         <div className="flex flex-col">
           <ContactItem
-            title="Email"
+            title={t("email")}
             value="kimannais1711@gmail.com"
             href="mailto:kimannais1711@gmail.com"
           />
           <ContactItem
-            title="Instagram"
+            title={t("instagram")}
             value="@kimanna10"
             href="https://instagram.com/kimanna10"
           />
@@ -318,10 +317,10 @@ function ContactItem({ title, value, href }) {
     <div className="group flex items-start gap-5 w-full border-b border-foreground/10 p-5 md:px-20 transition-all hover:bg-foreground/5">
       {/* Блок с надписью и значением */}
       <div className="flex flex-col gap-2">
-        <span className="text-xs uppercase tracking-[0.2em] text-foreground/60">
+        <span className="text-xs font-bold uppercase tracking-[0.2em] text-foreground/60">
           {title}
         </span>
-        <span className="text-lg md:text-xl font-light text-foreground tracking-wide group-hover:text-foreground transition-colors">
+        <span className="text-base md:text-lg font-light text-foreground tracking-wide group-hover:text-foreground transition-colors">
           {value}
         </span>
       </div>

@@ -32,7 +32,7 @@ export default function ContactSection() {
             href={c.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 group text-foreground/60 hover:text-foreground transition-all duration-300"
+            className="flex items-center gap-2 group text-foreground/60 hover:text-foreground transition-all duration-300"
           >
             <span className="p-2 rounded-lg border border-foreground/10 group-hover:bg-foreground/5 transition-colors">
               {c.icon}

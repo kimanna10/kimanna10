@@ -14,5 +14,15 @@
     "title": "Contacts",
     "email": "Email",
     "instagram": "Instagram"
+  },
+  "About": {
+    "title": "About",
+    "name": "Kim Anna",
+    "role": "Choreographer | Performance Director",
+    "bio": ["Choreographer and Performance Director with many years of experience in the dance and entertainment industry. She spent many years working in a dance studio, as well as in a music entertainment company alongside artists, trainees, and creative teams.\n\n She has experience working across a variety of formats, from video shoots and creative productions to concerts, live shows, and stage performances. Comfortable working with both small groups and large-scale teams.\n\n",
+    "In addition to creating choreography, she develops performance concepts, stage visuals, and other creative solutions. She especially enjoys the creative side of the process — generating ideas, building the overall concept of a project, and refining the details that help make each performance more cohesive and engaging.\n\n Previously, she served as the director of a show ballet team in Kazakhstan and is currently the leader of the dance team THE PARADOX."]
+  },
+  "Projects": {
+    "title": "Projects"
   }
 }

@@ -1,19 +1,19 @@
 "use client";
 
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl"; // 1. Добавили useLocale
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavLinks({ onLinkClick }) {
   const t = useTranslations("Nav");
-
   const pathname = usePathname();
+  const locale = useLocale(); // 2. Получаем текущую локаль (например, "ru")
 
-  const segments = pathname.split("/");
-
-  const cleanPathname =
-    segments.length > 2 ? `/${segments.slice(2).join("/")}` : "/";
+  // Функция для создания правильного пути с учетом языка
+  const getLocalizedHref = (href) => {
+    return href === "/" ? `/${locale}` : `/${locale}${href}`;
+  };
 
   const links = [
     { name: t("home"), href: "/" },
@@ -23,18 +23,19 @@ export default function NavLinks({ onLinkClick }) {
   ];
 
   return (
-    <nav className="flex flex-col gap-6 uppercase font-extrabold tracking-tighter ">
+    <nav className="flex flex-col gap-6 uppercase font-extrabold tracking-tighter">
       {links.map((link) => {
-        const isActive =
-          link.href === "/" ? false : cleanPathname === link.href;
+        // 3. Сравниваем пути корректно
+        const localizedHref = getLocalizedHref(link.href);
+        const isActive = pathname === localizedHref;
 
         return (
           <Link
             key={link.name}
-            href={link.href}
+            href={localizedHref} // 4. Используем локализованный путь
             onClick={onLinkClick}
             className={clsx(
-              "group relative text-3xl md:text-4xl lg:text-5xl  transition-all duration-500 ease-out isolate",
+              "group relative text-3xl md:text-4xl lg:text-5xl transition-all duration-500 ease-out isolate",
               isActive ? "pl-8" : "hover:pl-8",
             )}
           >
@@ -50,7 +51,7 @@ export default function NavLinks({ onLinkClick }) {
             <span
               className={clsx(
                 "absolute left-0 top-1/2 z-0 h-full w-0 bg-foreground/90 transition-all duration-500 group-hover:w-full -translate-y-1/2",
-                isActive ? "w-full " : "w-0 group-hover:w-full",
+                isActive ? "w-full" : "w-0 group-hover:w-full",
               )}
             />
           </Link>
