@@ -10,6 +10,7 @@ export default function ProjectCard({ project, aspect, onClick }) {
         src={project.thumb}
         alt={project.title}
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="object-cover h-full w-full transition-all duration-700 hover:scale-110 ease-in-out"
       />
     </div>
