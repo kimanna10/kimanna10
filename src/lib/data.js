@@ -1,5 +1,5 @@
-const { GoogleSpreadsheet } = require("google-spreadsheet");
-const { JWT } = require("google-auth-library");
+import { JWT } from "google-auth-library";
+import { GoogleSpreadsheet } from "google-spreadsheet";
 
 // Авторизация через данные из .env.local
 const serviceAccountAuth = new JWT({
@@ -38,5 +38,5 @@ async function getProjectsFromSheet(sheetTitle) {
     return []; // Возвращаем пустой массив, чтобы сайт не сломался
   }
 }
-
-module.exports = { getProjectsFromSheet };
+// А в конце файла замените module.exports на:
+export { getProjectsFromSheet };
