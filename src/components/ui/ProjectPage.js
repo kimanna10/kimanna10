@@ -35,17 +35,6 @@ export default function ProjectPage({ initialProjects }) {
     };
   }, [open]);
 
-  // const projectsWithIndex = initialProjects.map((p, i) => ({
-  //   ...p,
-  //   originalIndex: i,
-  // }));
-
-  // const topProjects = projectsWithIndex.filter((p) => p.priority === "top");
-  // const baseProjects = projectsWithIndex.filter((p) => p.priority === "base");
-
-  // // Объединяем, чтобы Top были в начале
-  // const sortedProjects = [...topProjects, ...baseProjects];
-  // 1. Сортируем проекты (без добавления originalIndex)
   const sortedProjects = [
     ...initialProjects.filter((p) => p.priority === "top"),
     ...initialProjects.filter((p) => p.priority === "base"),
@@ -89,8 +78,9 @@ export default function ProjectPage({ initialProjects }) {
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        index={index}
-        slides={slides}
+        slides={[slides[index]]}
+        // index теперь всегда 0, так как слайд один
+        index={0}
         render={{
           slide: ({ slide }) => {
             return (
@@ -120,7 +110,12 @@ export default function ProjectPage({ initialProjects }) {
               </LoadableContent>
             );
           },
+          buttonPrev: () => null,
+          buttonNext: () => null,
         }}
+        // Дополнительно отключаем свайпы для полной уверенности
+        carousel={{ finite: true }}
+        controller={{ touch: false }}
       />
     </main>
   );
