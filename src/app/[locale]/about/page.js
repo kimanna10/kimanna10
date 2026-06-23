@@ -1,5 +1,4 @@
 "use client";
-import Gallery from "@/components/ui/Gallery";
 import Heading from "@/components/ui/Heading";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -61,13 +60,13 @@ export default function About() {
         </div>
 
         {/* Галерея */}
-        <Gallery
+        {/* <Gallery
           images={images}
           onOpen={(i) => {
             setIndex(i);
             setOpen(true);
           }}
-        />
+        /> */}
       </div>
 
       <Lightbox
