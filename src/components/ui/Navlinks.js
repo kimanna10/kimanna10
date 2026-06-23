@@ -41,7 +41,7 @@ export default function NavLinks({ onLinkClick }) {
           >
             <span
               className={clsx(
-                "relative z-10 block transition-colors duration-300 px-6",
+                "relative z-10 block transition-colors duration-300 md:px-6 px-4",
                 isActive ? "text-background" : "group-hover:text-background",
               )}
             >

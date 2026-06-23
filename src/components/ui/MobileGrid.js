@@ -1,62 +1,90 @@
 "use client";
 
 import ProjectCard from "@/components/ui/ProjectCard";
+import { motion } from "framer-motion";
 
-export default function MobileGrid({ projects, onOpen }) {
+export default function MobileGrid({ sortedProjects, onOpen }) {
+  const distributeToColumns = (items, colCount) => {
+    const columns = Array.from({ length: colCount }, () => []);
+    items.forEach((item, index) => {
+      // Сохраняем "глобальный" индекс для getAspect
+      columns[index % colCount].push({ ...item, globalIndex: index });
+    });
+    return columns;
+  };
+
+  const cols2 = distributeToColumns(sortedProjects, 2);
+  const cols4 = distributeToColumns(sortedProjects, 4);
+
+  // 1. Настройка анимации (появление с мягким выездом)
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.9,
+    },
+    visible: (i) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: i * 0.02,
+        duration: 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    }),
+  };
+
   return (
-    <div className="columns-2 md:columns-3 xl:columns-4 md:gap-4 gap-2">
-      {projects.map((project, index) => (
-        <div
-          key={project.id || index}
-          className="md:mb-4 mb-2 break-inside-avoid"
-        >
-          <ProjectCard
-            project={project}
-            aspect={getAspect(index)}
-            onClick={() => onOpen(index)}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="md:hidden grid grid-cols-2 gap-2">
+        {cols2.map((col, colIndex) => (
+          <div key={colIndex} className="flex flex-col gap-2">
+            {col.map((p) => (
+              <motion.div
+                key={p.id}
+                custom={p.globalIndex}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <ProjectCard
+                  project={p}
+                  priority={p.globalIndex < 8}
+                  aspect={getAspect(p.globalIndex)}
+                  onClick={() => onOpen(p.globalIndex)}
+                />
+              </motion.div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="hidden md:grid grid-cols-4 gap-4">
+        {cols4.map((col, colIndex) => (
+          <div key={colIndex} className="flex flex-col gap-4">
+            {col.map((p) => (
+              <motion.div
+                key={p.id}
+                custom={p.globalIndex}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <ProjectCard
+                  project={p}
+                  priority={p.globalIndex < 8}
+                  aspect={getAspect(p.globalIndex)}
+                  onClick={() => onOpen(p.globalIndex)}
+                />
+              </motion.div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
-// function getAspect(index) {
-//   const layouts = [
-//     "aspect-[4/5]",
-//     "aspect-video",
-//     "aspect-square",
-//     "aspect-[3/4]",
-//     "aspect-[5/4]",
-//     "aspect-[9/16]",
-//     "aspect-[16/10]",
-//   ];
-
-//   return layouts[index % layouts.length];
-// }
-// function getAspect(index) {
-//   if (index % 12 === 0) return "aspect-[4/5]";
-
-//   const aspects = [
-//     "aspect-video",
-//     "aspect-[4/3]",
-//     "aspect-square",
-//     "aspect-[16/10]",
-//     "aspect-[3/2]",
-//   ];
-
-//   return aspects[index % aspects.length];
-// }
-
-// function getAspect(index) {
-//   if (index % 11 === 0) return "aspect-[16/9]";
-//   if (index % 7 === 0) return "aspect-square";
-//   if (index % 5 === 0) return "aspect-[9/16]";
-
-//   return ["aspect-[4/5]", "aspect-video", "aspect-[5/4]", "aspect-[3/4]"][
-//     index % 4
-//   ];
-// }
 function getAspect(index) {
   if (index % 19 === 0) return "aspect-[16/9]";
   if (index % 13 === 0) return "aspect-[9/16]";

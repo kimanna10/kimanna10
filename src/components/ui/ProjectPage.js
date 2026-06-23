@@ -1,8 +1,10 @@
 "use client";
 import Heading from "@/components/ui/Heading";
+
 import InstagramEmbed from "@/components/ui/InstagramEmbed";
 import LoadableContent from "@/components/ui/LoadableContent";
 import MobileGrid from "@/components/ui/MobileGrid";
+import VideoFrame from "@/components/ui/VideoFrame";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
@@ -12,6 +14,11 @@ export default function ProjectPage({ initialProjects }) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const t = useTranslations("Projects");
+
+  const [isClient, setIsClient] = useState(false); // Флаг для предотвращения гидратации
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (open) {
@@ -28,10 +35,28 @@ export default function ProjectPage({ initialProjects }) {
     };
   }, [open]);
 
-  const slides = initialProjects.map((p) => ({
+  // const projectsWithIndex = initialProjects.map((p, i) => ({
+  //   ...p,
+  //   originalIndex: i,
+  // }));
+
+  // const topProjects = projectsWithIndex.filter((p) => p.priority === "top");
+  // const baseProjects = projectsWithIndex.filter((p) => p.priority === "base");
+
+  // // Объединяем, чтобы Top были в начале
+  // const sortedProjects = [...topProjects, ...baseProjects];
+  // 1. Сортируем проекты (без добавления originalIndex)
+  const sortedProjects = [
+    ...initialProjects.filter((p) => p.priority === "top"),
+    ...initialProjects.filter((p) => p.priority === "base"),
+  ];
+
+  // 2. Создаем слайды для Lightbox из уже отсортированного списка
+  const slides = sortedProjects.map((p) => ({
     title: p.title,
     type: p.type,
-    url: p.video,
+    video: p.video,
+    priority: p.priority,
   }));
 
   const InstagramWrapper = ({ url, onReady }) => {
@@ -45,13 +70,15 @@ export default function ProjectPage({ initialProjects }) {
     return <InstagramEmbed url={url} />;
   };
 
+  if (!isClient) return null;
+
   return (
     <main className="min-h-dvh bg-background">
       <Heading title={t("title")} />
 
       <div className="pt-5">
         <MobileGrid
-          projects={initialProjects}
+          sortedProjects={sortedProjects}
           onOpen={(i) => {
             setIndex(i);
             setOpen(true);
@@ -67,25 +94,28 @@ export default function ProjectPage({ initialProjects }) {
         render={{
           slide: ({ slide }) => {
             return (
-              <LoadableContent>
+              <LoadableContent key={slide.video}>
                 {(setReady) => (
-                  <>
+                  <div className="w-full max-w-4xl aspect-video flex items-center justify-center">
                     {slide.type === "youtube" ? (
                       <iframe
-                        src={slide.url}
+                        src={slide.video}
                         onLoad={() => setReady(true)}
                         className="w-full max-w-4xl aspect-video rounded-lg"
                         allowFullScreen
                       />
+                    ) : slide.type === "tiktok" ? (
+                      <VideoFrame
+                        url={slide.video}
+                        onReady={() => setReady(true)}
+                      />
                     ) : (
-                      <div className="w-full max-w-4xl">
-                        <InstagramWrapper
-                          url={slide.url}
-                          onReady={() => setReady(true)}
-                        />
-                      </div>
+                      <InstagramWrapper
+                        url={slide.url}
+                        onReady={() => setReady(true)}
+                      />
                     )}
-                  </>
+                  </div>
                 )}
               </LoadableContent>
             );

@@ -23,7 +23,7 @@ export default function Navbar() {
       {/* Кнопка открытия */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed top-5 right-5 z-50 p-2 bg-foreground/10 rounded-lg hover:bg-foreground/20 transition"
+        className="fixed top-5 right-5 z-50 p-2 bg-foreground/10 rounded-lg hover:bg-foreground/20 transition backdrop-blur-sm"
       >
         <Menu size={32} />
       </button>
@@ -47,7 +47,7 @@ export default function Navbar() {
         )}
       >
         <div className="space-y-10">
-          <div className="flex justify-end items-center px-6 ">
+          <div className="flex justify-start items-center flex-row-reverse md:px-6 px-4 gap-4">
             <button onClick={() => setIsOpen(false)}>
               <X size={32} />
             </button>

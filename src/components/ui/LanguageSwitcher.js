@@ -22,7 +22,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="fixed top-5 right-20 z-50 flex items-center gap-1 bg-foreground/10 p-1 rounded-lg">
+    <div className="flex items-center gap-1 bg-foreground/10 p-1 rounded-lg">
       {locales.map((locale) => (
         <button
           key={locale.code}
