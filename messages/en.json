@@ -26,5 +26,46 @@
   },
   "Projects": {
     "title": "Projects"
+  },
+  "Resume": {
+    "personal": {
+      "title": "Personal Information",
+      "name": "Kim Anna",
+      "role": "Choreographer | Performance Director",
+      "birth": "10/10/1999",
+      "mbti": "ENFP",
+      "location": "Seoul, South Korea"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "jobs": [
+        {
+          "title": "Choreographer, Performance Director, Dance Instructor, Founder & Leader of a Dance Team",
+          "place": [
+            {
+              "title": "MM Dance Studio & Entertainment (Almaty, Kazakhstan)",
+              "date": "2015–2021"
+            },
+            {
+              "title": "Freelance (Almaty, Kazakhstan)",
+              "date": "2021–2025"
+            }
+          ],
+          "description": "Collaborated with artists and trainees, developed performance concepts and choreography, and trained backup dancers. Instructed students and prepared them for recitals, flash mobs, and competitions."
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "languages_value": "Russian (native)\nEnglish (B1)\nKorean (beginner)"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "desc": "View portfolio"
+    },
+    "contacts": {
+      "title": "Contacts",
+      "desc": "View contacts"
+    }
   }
 }
