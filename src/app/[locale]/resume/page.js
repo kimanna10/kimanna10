@@ -51,7 +51,7 @@ export default function ResumePage() {
         />
         <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
 
-        <div className="relative z-10 p-8 md:p-16">
+        <div className="relative z-10 p-8 md:p-12">
           <h1 className="text-4xl md:text-6xl font-semibold uppercase tracking-tighter mb-2">
             {t("personal.name")}
           </h1>
@@ -61,11 +61,11 @@ export default function ResumePage() {
 
       <div className="max-w-full space-y-10">
         {/* 2. Сетка */}
-        <section className="grid grid-cols-1 md:grid-cols-4  border-t border-l border-foreground/10">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  border-t border-l border-foreground/10">
           {gridItems.map((item, i) => (
             <div
               key={i}
-              className="p-8 md:p-16 min-h-[10vh] flex flex-col justify-start border-b border-r border-foreground/10"
+              className="p-8 md:p-12 min-h-[10vh] flex flex-col justify-start border-b border-r border-foreground/10"
             >
               <div className="flex flex-col">
                 <h2 className="text-base font-black uppercase tracking-[0.2em] opacity-80 mb-4">
@@ -95,7 +95,7 @@ export default function ResumePage() {
         </section>
 
         {/* 3. Опыт работы */}
-        <section className="p-8 md:p-16">
+        <section className="p-8 md:p-12">
           <h2 className="text-base font-black uppercase tracking-[0.3em] mb-12 opacity-80">
             {t("experience.title")}
           </h2>
@@ -129,6 +129,38 @@ export default function ResumePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 4. Образование */}
+        <section className="p-8 md:p-12">
+          <h2 className="text-base font-black uppercase tracking-[0.3em] mb-12 opacity-80">
+            {t("education.title")}
+          </h2>
+          <div className="space-y-16 tracking-tight leading-normal">
+            <div className="relative pl-8 md:pl-12 border-l border-foreground/20 space-y-4">
+              <div className="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-foreground rounded-full" />
+
+              {/* Университет */}
+              <h3 className="text-xl font-medium uppercase">
+                {t("education.university")}
+              </h3>
+
+              {/* Информация о степени и годах */}
+              <div className="grid md:grid-cols-[160px,1fr] gap-2 pt-2">
+                <span className="text-base font-bold uppercase opacity-40">
+                  {t("education.years")}
+                </span>
+                <div className="space-y-1">
+                  <p className="text-sm md:text-base font-medium">
+                    {t("education.degree")}
+                  </p>
+                  <p className="text-sm md:text-base font-light opacity-80">
+                    {t("education.major")}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

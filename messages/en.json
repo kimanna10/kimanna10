@@ -66,6 +66,13 @@
     "contacts": {
       "title": "Contacts",
       "desc": "View contacts"
+    },
+    "education": {
+      "title": "Education",
+      "university": "International Information Technology University (IITU) (Kazakhstan, Almaty)",
+      "years": "2017–2021",
+      "degree": "Bachelor's degree",
+      "major": "Information Systems"
     }
   }
 }

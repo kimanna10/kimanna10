@@ -23,6 +23,7 @@ export default function Contacts() {
             value="@kimanna10"
             href="https://instagram.com/kimanna10"
           />
+
           {/* <ContactItem label="03" title="Location" value="Seoul, South Korea" /> */}
         </div>
       </div>

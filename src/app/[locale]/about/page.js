@@ -27,7 +27,7 @@ export default function About() {
       <Heading title={t("title")} />
 
       <div className="pt-5">
-        <section className="flex flex-col md:flex-row w-full ">
+        <section className="flex flex-col lg:flex-row w-full ">
           <div className="flex-1 p-5 md:p-20 flex flex-col justify-start">
             <h2 className="text-3xl md:text-5xl font-light tracking-tighter mb-8 uppercase">
               {t("name")}
@@ -35,6 +35,7 @@ export default function About() {
                 {t("role")}
               </span>
             </h2>
+
             <p className="text-base md:text-lg leading-snug text-foreground/70 font-light whitespace-pre-line">
               {t("bio.0")}
             </p>
@@ -43,7 +44,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="w-full md:w-1/2 aspect-3/4  relative">
+          <div className="w-full md:w-1/2 aspect-3/4 relative ">
             <Image
               src="/img/main.JPG"
               alt="Anna"
