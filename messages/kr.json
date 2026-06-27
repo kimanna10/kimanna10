@@ -70,7 +70,7 @@
       "desc": "연락처 보기"
     },
     "education": {
-      "title": "Білімі",
+            "title": "학력",
       "university": "International Information Technology University (IITU) (카자흐스탄, 알마티)",
       "years": "2017–2021",
       "degree": "학사",
